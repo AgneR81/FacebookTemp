@@ -102,14 +102,26 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   width: 100%;
-  height: 800px;
   background-color: lightblue;
+}
+
+@media (max-width: 600px) {
+  .wrapper .main {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .wrapper .main .left {
   width: 100%;
   height: 90vh;
   background-color: burlywood;
+}
+
+@media (max-width: 600px) {
+  .wrapper .main .left {
+    display: none;
+  }
 }
 
 .wrapper .main .section {
@@ -125,7 +137,10 @@ h6 {
 
 .wrapper .main .section .card {
   width: 70%;
-  height: 150px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   margin-left: 15%;
   border: 1px solid #dfd7d7;
   border-radius: 5px;
@@ -154,13 +169,14 @@ h6 {
   width: 50px;
   height: 50px;
   margin-left: 20px;
+  border-radius: 20px;
 }
 
 .wrapper .main .section .card .card__head .user {
   display: grid;
   grid-template-rows: 1fr 1fr;
   width: 100%;
-  background-color: antiquewhite;
+  background-color: #e7e4b6;
 }
 
 .wrapper .main .section .card .card__head .user .name {
@@ -177,8 +193,68 @@ h6 {
   align-items: center;
 }
 
+.wrapper .main .section .card .card__main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wrapper .main .section .card .card__main p {
+  padding: 5px;
+}
+
+.wrapper .main .section .card .card__main .like {
+  display: flex;
+  justify-items: center;
+  align-items: stretch;
+  padding: 10px;
+}
+
+.wrapper .main .section .card .card__footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper .main .section .card .card__footer img {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.wrapper .main .section .card .card__footer form {
+  width: 80%;
+  margin-left: 10px;
+  position: relative;
+  border: 1px solid #dfd7d7;
+  border-radius: 30px;
+}
+
+.wrapper .main .section .card .card__footer form .input {
+  width: inherit;
+  height: inherit;
+}
+
+.wrapper .main .section .card .card__footer form .icons {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 .wrapper .main .right {
   width: 100%;
   height: 90vh;
   background-color: pink;
+}
+
+@media (max-width: 600px) {
+  .wrapper .main .right {
+    display: none;
+  }
 }
