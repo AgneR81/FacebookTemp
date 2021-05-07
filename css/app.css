@@ -126,12 +126,14 @@ h6 {
   border: 1px solid grey;
   border-radius: 20px;
   float: left;
+  position: relative;
   width: 80%;
   background: #f1f1f1;
 }
 
-.wrapper .header .header__wrap .logo form.example input[type=text] .button {
+.wrapper .header .header__wrap .logo form.example input[type=text] button {
   float: left;
+  position: absolute;
   width: 10%;
   padding: 1px;
   background: #2196F3;
@@ -143,9 +145,9 @@ h6 {
   cursor: pointer;
 }
 
-.wrapper .header .header__wrap .logo form.example input[type=text] .button:hover {
+.wrapper .header .header__wrap .logo form.example input[type=text] button:hover {
   border-radius: 10px;
-  background-color: burlywood;
+  background-color: red;
   color: chocolate;
 }
 
@@ -231,12 +233,32 @@ h6 {
   width: 100%;
   height: 90vh;
   background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
 }
 
 @media (max-width: 600px) {
   .wrapper .main .left {
     display: none;
   }
+}
+
+.wrapper .main .left .left__link {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.wrapper .main .left .left__link .img {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.wrapper .main .left .left__link h3 {
+  padding: 5px;
 }
 
 .wrapper .main .section {
@@ -322,9 +344,10 @@ h6 {
 }
 
 .wrapper .main .section .card .card__main .like {
+  width: 100%;
   display: flex;
-  justify-items: center;
-  align-items: stretch;
+  align-items: center;
+  justify-content: space-evenly;
   padding: 10px;
 }
 
@@ -341,25 +364,36 @@ h6 {
   border-radius: 20px;
 }
 
-.wrapper .main .section .card .card__footer form {
-  width: 80%;
-  margin-left: 10px;
+.wrapper .main .section .card .card__footer .comments {
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  float: left;
   position: relative;
-  border: 1px solid #dfd7d7;
-  border-radius: 30px;
+  width: 100%;
+  background: #f1f1f1;
+  margin-left: 5px;
 }
 
-.wrapper .main .section .card .card__footer form .input {
-  width: inherit;
-  height: inherit;
+.wrapper .main .section .card .card__footer .comments input {
+  width: 100%;
+  display: inline-block;
+  margin-top: 15px;
 }
 
-.wrapper .main .section .card .card__footer form .icons {
+.wrapper .main .section .card .card__footer .comments .icons {
   position: absolute;
   display: inline-block;
+  margin-top: 20px;
+  margin-right: 5px;
   right: 0;
   top: 0;
   bottom: 0;
+}
+
+.wrapper .main .section .card .card__footer .comments .icons .fa {
+  width: 30px;
+  height: 30px;
 }
 
 .wrapper .main .right {

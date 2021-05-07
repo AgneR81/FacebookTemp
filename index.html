@@ -14,7 +14,7 @@
             <div class="header__wrap">
                 <div class="logo">
                     <img src="./img/fb.ico" class="img" alt="FB">
-                    <form class="example" action="action_page.php">
+                    <form class="example" action="search_page.php">
                         <input type="text" placeholder="Search facebook" name="search"> 
                         <button type="submit"><i class="fa fa-search"></i></button> 
                     </form>
@@ -39,13 +39,54 @@
                     <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <!-- <nav>
-                <a href="./">Home</a>
-            </nav> -->
         </header>
         
         <main class="main">
-            <aside class="left"></aside>
+            <aside class="left">
+               <a href="#">
+                   <div class="left__link">
+                       <img src="./img/avatar/user.png" class="img"  alt="user">
+                       <h3>Vardenis Pavardenis</h3>
+                   </div>
+               </a>
+               <a href="#">
+                <div class="left__link">
+                    <img src="./img/rgb.png" class="img"  alt="user">
+                    <h3>Vardenis Pavardenis</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="left__link">
+                    <img src="./img/color-wheel.png" class="img"  alt="user">
+                    <h3>Vardenis Pavardenis</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="left__link">
+                    <img src="./img/avatar/user.png" class="img"  alt="user">
+                    <h3>Vardenis Pavardenis</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="left__link">
+                    <img src="./img/avatar/user.png" class="img"  alt="user">
+                    <h3>Vardenis Pavardenis</h3>
+                </div>
+            </a>
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+            <a href="#">
+                <div class="left__link">
+                    <img src="./img/avatar/user.png" class="img"  alt="user">
+                    <h3>Vardenis Pavardenis</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="left__link">
+                    <img src="./img/avatar/user.png" class="img"  alt="user">
+                    <h3>Vardenis Pavardenis</h3>
+                </div>
+            </a>
+            </aside>
             <section class="section">
                 <div class="card">
                     <div class="card__head">
@@ -62,15 +103,16 @@
                         <div><p>Neturiu komentaru....</p></div>
                         <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
                         <div class="like">
-                            <i class="fa fa-heart" aria-hidden="true">Like</i>
-                            <i class="fa fa-comment" aria-hidden="true">Comment</i>
+                            <a href="#"><i class="fa fa-heart" aria-hidden="true">Like</i></a>
+                            <a href="#"><i class="fa fa-comment" aria-hidden="true">Comment</i></a>
                         </div>
                     </div>
                     <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
                     <div class="card__footer">
                         <img src="./img/avatar/user.png" alt="avataras">
-                        <form action="/action_page.php">
-                            <input type="text" class="input" id="comments" name="comments">
+                        <form class="comments" action="/comments_page.php">
+                            <input type="text" placeholder="comments" id="comments" name="comments">
+                            <button type="submit"></button>
                             <div class="icons">
                                 <i class="fa fa-smile-o" aria-hidden="true"></i>
                                 <i class="fa fa-camera" aria-hidden="true"></i>
