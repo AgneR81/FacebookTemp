@@ -218,7 +218,14 @@
                     padding-top: 10px;
                     padding-bottom: 10px;
                     p {
+                        display: inline-block;
+                        width: 100%;
+                        height: 50px;
+                        overflow-y: scroll;
                         padding: 5px;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
                     }
                     .like  {
                         width: 100%;
@@ -249,12 +256,14 @@
                         margin-left: 5px;
                         input {
                            width: 100%;
-                           display: inline-block;
+                           display: flex;
                            margin-top: 15px;
+                           overflow: scroll;
                         }    
                         .icons {
                             position: absolute;
-                            display: inline-block;
+                            display: flex;
+                            flex-direction: row;
                             margin-top: 20px;
                             margin-right: 5px;
                             right: 0;
