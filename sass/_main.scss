@@ -227,14 +227,16 @@
                             display: none;
                         }
                     }
-                    .like  {
-                        width: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        padding: 10px;
-                    }
+                }    
+                .like  {
+                    width: 100%;
+                    display: flex;
+
+                    align-items: center;
+                    justify-content: space-evenly;
+                    padding: 10px;
                 }
+                
                 .card__footer {
                     width: 100%;
                     display: flex;

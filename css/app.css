@@ -351,7 +351,7 @@ h6 {
   display: none;
 }
 
-.wrapper .main .section .card .card__main .like {
+.wrapper .main .section .card .like {
   width: 100%;
   display: flex;
   align-items: center;

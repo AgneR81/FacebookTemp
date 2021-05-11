@@ -7,14 +7,16 @@ function getData(data) {
 
     if (Array.isArray(data)) {
 
+        //-------------
         for (let i = 0; i < data.length; i++) {
             
             HTML += getList(data[i]);
         }
 
         return sectionBody.innerHTML = HTML;
-        // return console.log(HTML);
-        // return console.log(data);
+       
+        //--------------
+
     } else {
         return console.log('Tai ne masyvas!');
     }
@@ -40,12 +42,13 @@ function getList(list) {
                     </div>
                     <div class="card__main">
                         <div><p>${list.pranesimas.tekstas}</p></div>
+                    </div>    
                         <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
-                        <div class="like">
-                            <a href="#"><i class="fa fa-heart" aria-hidden="true">Like</i></a>
-                            <a href="#"><i class="fa fa-comment" aria-hidden="true">Comment</i></a>
-                        </div>
+                    <div class="like">
+                        <a href="#"><i class="fa fa-heart" aria-hidden="true">Like</i></a>
+                        <a href="#"><i class="fa fa-comment" aria-hidden="true">Comment</i></a>
                     </div>
+                    
                     <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
                     <div class="card__footer">
                         <img src="./img/avatar/user.png" alt="avataras">
