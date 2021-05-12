@@ -151,37 +151,45 @@ function getText(message) {
 
     // console.log(messageText);
 
-
     let HTML;
     let kiek = 10;
     let cutted;
-    let normal;
-
     let print;
-
     let textArr = messageText.split(' ');
-    
-    console.log(textArr);
 
    //. cutted text first
     if (textArr.length > kiek) {
         cutted = textArr.slice();
-        console.log(cutted);
         cutted.length = kiek;
-        console.log(cutted);
         print = cutted.join(' ');
-        console.log('-------------');
-        HTML = `<p>${print} <span> ...show more </span></p>`;
+        HTML = `<p value="${messageText}">${print}<span> ...show more</span></p>`;
     } else {
 
-        //Normal text
-        // normal = textArr.slice();
         print = textArr.join(' ');
-        HTML= `<p>${print}</p>`;
+        HTML= `<p>${print}<span></span></p>`;
     }  
 
     return HTML;
 }
+
+function renderText() {
+    
+    let cards = document.querySelectorAll('.card');
+    let showButton = document.querySelectorAll('.card__main span');
+    let cardMain = document.querySelectorAll('.card__main p');
+
+    for (let i = 0; i < showButton.length; i++) {
+
+        let feedText = feed[i].pranesimas.tekstas;
+
+        showButton[i].addEventListener('click', (e) => {
+            console.log(i);
+            cardMain[i].innerHTML = feedText;
+
+        });
+    }
+}
+
 
 //--Global function------------------
 
@@ -200,4 +208,6 @@ function getAvatar(img) {
 
 //--------------
 getData(feed);
+
+renderText();
 
