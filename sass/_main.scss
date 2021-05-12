@@ -103,6 +103,7 @@
                     }
                     h3 {
                         padding: 5px;
+                        font-family: $font-halant;
                     }
                     &:hover {
                         border-radius: 10px;
@@ -152,6 +153,7 @@
                 }
                 h3 {
                     padding: 5px;
+                    font-family: $font-halant;
                 }
             }
         }    
@@ -223,14 +225,19 @@
                     width: 100%;
                     display: inline-block;
                     p {
-                        font-family: 'Courier New', Courier, monospace;
+                        font-family: 'Halant', serif;
                         margin-top: 5px;
                         font-size: 15px;
+                    span {
+                        color: coral;
+                        font-family: 'Halant', serif;
+                    }
 
                     }
                     .gallery {
                         display: inline-block;
                         width: 100%;
+                        margin-bottom: 5px;
                         img {
                             display: inline-block;
                             width: 100%;
@@ -244,10 +251,13 @@
                 .like  {
                     width: 100%;
                     display: flex;
-
                     align-items: center;
                     justify-content: space-evenly;
                     padding: 10px;
+                    a {
+                        color: grey;
+                        font-family: $font-halant;
+                    }
                 }
                 
                 .card__footer {

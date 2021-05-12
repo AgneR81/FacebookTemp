@@ -148,23 +148,48 @@ function returnFooter(who) {
 function getText(message) {
 
     let messageText = message.tekstas;
+
+    // console.log(messageText);
+
+    let HTML;
     let kiek = 10;
+    let cutted;
+    let print;
     let textArr = messageText.split(' ');
-    let normal = textArr.length;
-    let cutted = '';
 
-    // console.log(textArr);
+   //. cutted text first
+    if (textArr.length > kiek) {
+        cutted = textArr.slice();
+        cutted.length = kiek;
+        print = cutted.join(' ');
+        HTML = `<p value="${messageText}">${print}<span> ...show more</span></p>`;
+    } else {
 
-   //..?
-    if (normal.length < kiek) {
-        cutted = normal.length;
-        console.log(cutted);
-    }
-
-    let HTML = `<p>${message.tekstas}</p>`;
+        print = textArr.join(' ');
+        HTML= `<p>${print}<span></span></p>`;
+    }  
 
     return HTML;
 }
+
+function renderText() {
+    
+    let cards = document.querySelectorAll('.card');
+    let showButton = document.querySelectorAll('.card__main span');
+    let cardMain = document.querySelectorAll('.card__main p');
+
+    for (let i = 0; i < showButton.length; i++) {
+
+        let feedText = feed[i].pranesimas.tekstas;
+
+        showButton[i].addEventListener('click', (e) => {
+            console.log(i);
+            cardMain[i].innerHTML = feedText;
+
+        });
+    }
+}
+
 
 //--Global function------------------
 
@@ -183,4 +208,6 @@ function getAvatar(img) {
 
 //--------------
 getData(feed);
+
+renderText();
 
