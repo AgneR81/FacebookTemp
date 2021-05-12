@@ -8,9 +8,13 @@ function getData(data) {
     if (Array.isArray(data)) {
 
         //-------------
-        for (let i = 0; i < data.length; i++) {
+        // for (let i = 0; i < data.length; i++) {
             
-            HTML += getList(data[i]);
+        //     HTML += getList(data[i]);
+        // }
+
+        for (let index of data) {
+            HTML += getList(index);
         }
 
         return sectionBody.innerHTML = HTML;
@@ -141,9 +145,23 @@ function returnFooter(who) {
     return HTML;
 }
 
-function getText(text) {
+function getText(message) {
 
-    let HTML = `<p>${text.tekstas}</p>`;
+    let messageText = message.tekstas;
+    let kiek = 10;
+    let textArr = messageText.split(' ');
+    let normal = textArr.length;
+    let cutted = '';
+
+    // console.log(textArr);
+
+   //..?
+    if (normal.length < kiek) {
+        cutted = normal.length;
+        console.log(cutted);
+    }
+
+    let HTML = `<p>${message.tekstas}</p>`;
 
     return HTML;
 }
