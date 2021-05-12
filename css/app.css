@@ -231,7 +231,6 @@ h6 {
 
 .wrapper .main .left {
   width: 100%;
-  height: 90vh;
   background-color: burlywood;
   display: flex;
   flex-direction: column;
@@ -249,6 +248,8 @@ h6 {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px grey;
 }
 
 .wrapper .main .left .left__link .img {
@@ -263,7 +264,6 @@ h6 {
 
 .wrapper .main .section {
   width: 100%;
-  height: 90vh;
   background-color: beige;
   overflow-y: scroll;
 }
@@ -274,7 +274,6 @@ h6 {
 
 .wrapper .main .section .card {
   width: 70%;
-  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -285,6 +284,7 @@ h6 {
   margin-top: 10px;
   overflow: hidden;
   padding: 10px;
+  box-shadow: 2px 4px 15px 0px grey;
 }
 
 .wrapper .main .section .card:first-of-type {
@@ -300,6 +300,8 @@ h6 {
   grid-template-columns: 2fr 10fr 1fr;
   width: 100%;
   background-color: #e7e4b6;
+  box-shadow: 2px 4px 15px 0px grey;
+  border-radius: 5px;
 }
 
 .wrapper .main .section .card .card__head img {
@@ -314,10 +316,13 @@ h6 {
   grid-template-rows: 1fr 1fr;
   width: 100%;
   background-color: #e7e4b6;
+  margin-left: 20px;
 }
 
 .wrapper .main .section .card .card__head .user .name {
   width: 100%;
+  padding-top: 3px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .wrapper .main .section .card .card__head .user .time {
@@ -332,26 +337,30 @@ h6 {
 
 .wrapper .main .section .card .card__main {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  display: inline-block;
 }
 
 .wrapper .main .section .card .card__main p {
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.wrapper .main .section .card .card__main .gallery {
   display: inline-block;
   width: 100%;
-  height: 50px;
-  overflow-y: scroll;
-  padding: 5px;
 }
 
-.wrapper .main .section .card .card__main p::-webkit-scrollbar {
-  display: none;
+.wrapper .main .section .card .card__main .gallery img {
+  display: inline-block;
+  width: 100%;
+  height: 250px;
+  background-position: center center;
+  background-size: cover;
+  padding: 10px 0px 0px 0px;
 }
 
-.wrapper .main .section .card .card__main .like {
+.wrapper .main .section .card .like {
   width: 100%;
   display: flex;
   align-items: center;
@@ -363,11 +372,12 @@ h6 {
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding-top: 10px;
 }
 
 .wrapper .main .section .card .card__footer img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin-left: 20px;
   border-radius: 20px;
 }
@@ -375,7 +385,7 @@ h6 {
 .wrapper .main .section .card .card__footer .comments {
   padding: 5px;
   border: 1px solid grey;
-  border-radius: 20px;
+  border-radius: 10px;
   float: left;
   position: relative;
   width: 100%;
@@ -384,10 +394,15 @@ h6 {
 }
 
 .wrapper .main .section .card .card__footer .comments input {
-  width: 100%;
+  width: 50%;
   display: flex;
   margin-top: 15px;
-  overflow: scroll;
+  word-wrap: break-word;
+  overflow-x: scroll;
+}
+
+.wrapper .main .section .card .card__footer .comments input::-webkit-scrollbar {
+  display: none;
 }
 
 .wrapper .main .section .card .card__footer .comments .icons {
@@ -408,7 +423,6 @@ h6 {
 
 .wrapper .main .right {
   width: 100%;
-  height: 90vh;
   background-color: pink;
 }
 
