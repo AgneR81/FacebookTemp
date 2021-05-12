@@ -206,6 +206,7 @@ h6 {
 
 .wrapper .header .header__wrap .nav__right .username h3 {
   padding: 5px;
+  font-family: "Halant", serif;
 }
 
 .wrapper .header .header__wrap .nav__right .username:hover {
@@ -260,6 +261,7 @@ h6 {
 
 .wrapper .main .left .left__link h3 {
   padding: 5px;
+  font-family: "Halant", serif;
 }
 
 .wrapper .main .section {
@@ -341,14 +343,20 @@ h6 {
 }
 
 .wrapper .main .section .card .card__main p {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Halant', serif;
   margin-top: 5px;
   font-size: 15px;
+}
+
+.wrapper .main .section .card .card__main p span {
+  color: coral;
+  font-family: 'Halant', serif;
 }
 
 .wrapper .main .section .card .card__main .gallery {
   display: inline-block;
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .wrapper .main .section .card .card__main .gallery img {
@@ -366,6 +374,11 @@ h6 {
   align-items: center;
   justify-content: space-evenly;
   padding: 10px;
+}
+
+.wrapper .main .section .card .like a {
+  color: grey;
+  font-family: "Halant", serif;
 }
 
 .wrapper .main .section .card .card__footer {

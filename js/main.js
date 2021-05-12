@@ -148,20 +148,37 @@ function returnFooter(who) {
 function getText(message) {
 
     let messageText = message.tekstas;
+
+    // console.log(messageText);
+
+
+    let HTML;
     let kiek = 10;
+    let cutted;
+    let normal;
+
+    let print;
+
     let textArr = messageText.split(' ');
-    let normal = textArr.length;
-    let cutted = '';
+    
+    console.log(textArr);
 
-    // console.log(textArr);
-
-   //..?
-    if (normal.length < kiek) {
-        cutted = normal.length;
+   //. cutted text first
+    if (textArr.length > kiek) {
+        cutted = textArr.slice();
         console.log(cutted);
-    }
+        cutted.length = kiek;
+        console.log(cutted);
+        print = cutted.join(' ');
+        console.log('-------------');
+        HTML = `<p>${print} <span> ...show more </span></p>`;
+    } else {
 
-    let HTML = `<p>${message.tekstas}</p>`;
+        //Normal text
+        // normal = textArr.slice();
+        print = textArr.join(' ');
+        HTML= `<p>${print}</p>`;
+    }  
 
     return HTML;
 }
