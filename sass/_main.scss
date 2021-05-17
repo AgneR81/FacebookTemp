@@ -4,7 +4,7 @@
     .header {
         width: 100%;
         height: 10vh;
-        background-color: rgb(243, 177, 112);
+        background-color: #868B8E;
         position: fixed;
         justify-content: center;
         .header__wrap {
@@ -33,23 +33,6 @@
                     position: relative;
                     width: 80%;
                     background: #f1f1f1;
-                    button {
-                        float: left;
-                        position: absolute;
-                        width: 10%;
-                        padding: 1px;
-                        background: #2196F3;
-                        color: white;
-                        font-size: 17px;
-                        border: 1px solid grey;
-                        border-left: none; /* Prevent double borders */
-                        cursor: pointer;
-                        &:hover {
-                            border-radius: 10px;
-                            background-color: red;
-                            color: chocolate;
-                        }
-                      }
                   }
                   
             }
@@ -62,7 +45,7 @@
                     height: 50px;
                     padding: 7px;
                     
-                    color: brown;
+                    color: #E7D2CC;
                     cursor: pointer;
                     transition: .7s;
                     &:hover {
@@ -80,7 +63,7 @@
                     width: 30px;
                     height: 50px;
                     padding: 7px;
-                    color: brown;
+                    color: #E7D2CC;
                     cursor: pointer;
                     transition: .7s;
                     // &:first-of-type {
@@ -102,6 +85,7 @@
                         border-radius: 20px;
                     }
                     h3 {
+                        color: #E7D2CC;
                         padding: 5px;
                         font-family: $font-halant;
                     }
@@ -123,7 +107,7 @@
         grid-template-columns: 1fr 3fr 1fr ;
         width: 100%;
         // height: 800px;                       //reikes pasalint
-        background-color: lightblue;
+        background-color: #EEEDE7;
         @media (max-width: 600px) {
             display: flex;
             flex-direction: row;
@@ -131,7 +115,7 @@
         .left {
             width: 100%;
             // height: 90vh;      //reikes pasalint
-            background-color: burlywood;
+            background-color: rgb(230, 223, 214);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -145,13 +129,14 @@
                 flex-direction: row;
                 margin-top: 10px;
                 border-radius: 10px;
-                box-shadow: 0px 0px 20px 0px grey;
+                box-shadow: 0px 0px 20px 0px #E7D2CC;
                 .img {
                     width: 30px;
                     height: 30px;
                     border-radius: 20px;
                 }
                 h3 {
+                    color:#868B8E;
                     padding: 5px;
                     font-family: $font-halant;
                 }
@@ -161,7 +146,7 @@
         .section {
             width: 100%;
             // height: 90vh;
-            background-color: beige;
+            background-color: #EEEDE7;
             overflow-y: scroll;
             &::-webkit-scrollbar {
                 display: none;
@@ -190,7 +175,7 @@
                     display: grid;
                     grid-template-columns: 2fr 10fr 1fr;
                     width: 100%;
-                    background-color: rgb(231, 228, 182);
+                    background-color: #E7D2CC;
                     box-shadow: 2px 4px 15px 0px grey;
                     border-radius: 5px;
                     img {
@@ -203,9 +188,9 @@
                         display: grid;
                         grid-template-rows: 1fr 1fr;
                         width: 100%;
-                        background-color: rgb(231, 228, 182);
                         margin-left: 20px;
                         .name {
+                            color: grey;
                             width: 100%;
                             padding-top: 3px;
                             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -235,17 +220,110 @@
 
                     }
                     .gallery {
+                        position: relative;
                         display: inline-block;
                         width: 100%;
                         margin-bottom: 5px;
-                        img {
-                            display: inline-block;
-                            width: 100%;
-                            height: 250px;
-                            background-position: center center;
-                            background-size: cover;
-                            padding: 10px 0px 0px 0px ;
+                        .count {
+                            position: absolute;
+
                         }
+                        .gallery__wrap {
+                            width: 100%;
+                            background-color: aqua;
+                            position
+                            img {
+                                display: inline-block;
+                                width: 100%;
+                                height: 250px;
+                                background-position: center center;
+                                background-size: cover;
+                                padding: 10px 0px 0px 0px;
+                                &:nth-child(1) {
+                                    grid-area: i1;
+                                }
+                                &:nth-child(2) {
+                                    grid-area: i2;
+                                }
+                                &:nth-child(3) {
+                                    grid-area: i3;
+                                }
+                                &:nth-child(4) {
+                                    grid-area: i4;
+                                }
+                                &:nth-child(5) {
+                                    grid-area: i5;
+                                }
+                            }
+                        
+                        }
+
+                        
+                        .length--1 {
+                            display: grid;
+                            width: 100%;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-areas:
+                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1";
+                        }
+                        .length--2 {
+                            display: grid;
+                            width: 100%;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr;
+                            grid-template-areas:
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2";
+                        }
+                        .length--3 {
+                            display: grid;
+                            width: 100%;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr;
+                            grid-template-areas:
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i3 i3 i3"
+                            "i1 i1 i1 i3 i3 i3"
+                            "i1 i1 i1 i3 i3 i3";
+                        }
+                        .length--4 {
+                            display: grid;
+                            width: 100%;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr;
+                            grid-template-areas:
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i3 i3 i3 i4 i4 i4"
+                            "i3 i3 i3 i4 i4 i4"
+                            "i3 i3 i3 i4 i4 i4";
+                        }
+                        .length--5 {
+                            display: grid;
+                            width: 100%;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr;
+                            grid-template-areas:
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2"
+                            "i3 i3 i4 i4 i5 i5"
+                            "i3 i3 i4 i4 i5 i5"
+                            "i3 i3 i4 i4 i5 i5";
+                        }            
                     }
                 }    
                 .like  {
@@ -284,12 +362,11 @@
                            width: 50%;
                            display: flex;
                            margin-top: 15px;
-                           
                            word-wrap: break-word;
                            overflow-x: scroll;
                            &::-webkit-scrollbar {
                             display: none;
-                        }
+                            }
                         }    
                         .icons {
                             position: absolute;
@@ -314,7 +391,7 @@
         .right {
             width: 100%; 
             // height: 90vh;
-            background-color: pink;
+            background-color: #E7D2CC;
             @media (max-width: 600px) {
                 display: none;
             }
