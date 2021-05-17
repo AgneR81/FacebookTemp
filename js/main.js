@@ -111,13 +111,13 @@ function returnMain(text) {
 
     let HTML = `<div class="card__main">
                     ${getText(text)}
-                    <div class="gallery">
-                        <img src="./img/5.jpeg" alt="img">
-                    </div>    
+                    ${getGallery(text.paveiksliukai)}  
+                       
                 </div>`;
     
     return HTML;
 }
+
 
 function returnFooter(who) {
 
@@ -144,6 +144,37 @@ function returnFooter(who) {
       
     return HTML;
 }
+
+function getGallery(img) {
+
+    // console.log(img);
+
+    let HTML = '';
+    let pictures = '';
+
+    if (img.lenght > 0) {
+
+        for (let i = 0; i < img.lenght; i++) {
+            pictures += `<img src="./img/${img[i]}" alt="pic">`;
+        }
+   
+        console.log(pictures);
+
+
+        HTML = `<div class="gallery">
+                    <div class="gallery__wrap">
+                     ${pictures}   
+                    </div>   
+                </div>`;
+
+    }
+    
+    
+    return HTML;
+}
+
+
+
 
 function getText(message) {
 
