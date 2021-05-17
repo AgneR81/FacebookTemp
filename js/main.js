@@ -97,7 +97,7 @@ function returnHeader(who, time) {
                     ${getAvatar(who)}
                     <div class="user">
                         <div class="name">${who.vardas} ${who.pavarde} </div>
-                        <div class="time">${time}</div> 
+                        ${getTime(time)} 
                     </div>  
                     <div class="more">
                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
@@ -111,13 +111,13 @@ function returnMain(text) {
 
     let HTML = `<div class="card__main">
                     ${getText(text)}
-                    <div class="gallery">
-                        <img src="./img/5.jpeg" alt="img">
-                    </div>    
+                    ${getGallery(text.paveiksliukai)}  
+                       
                 </div>`;
     
     return HTML;
 }
+
 
 function returnFooter(who) {
 
@@ -144,6 +144,48 @@ function returnFooter(who) {
       
     return HTML;
 }
+
+function getGallery(img) {
+
+    // console.log(img);
+
+    let HTML = '';
+    let pictures = '';
+    let kiek = 4;
+
+    if (img.length > 0) {
+
+        for (let i = 0; i < img.length; i++) {
+            pictures += `<img src="./img/${img[i]}" alt="pic">`;
+            if (img.length > kiek) {
+
+                img.length = kiek;
+            }
+                HTML = `<div class="gallery">
+                    <div class="gallery__wrap length--${i + 1}">
+                     ${pictures}   
+                    </div>
+                    <div class="count">+5</div>  
+                </div>`;
+            
+        }
+    }
+    
+    
+    return HTML;
+}
+
+
+function getTime(time) {
+
+    console.log(time);
+
+    let HTML = '';
+
+    HTML = `<div class="time">${time}</div>`;
+}
+
+
 
 function getText(message) {
 
