@@ -3,16 +3,15 @@
     overflow-x: hidden;
     .header {
         width: 100%;
-        height: 10vh;
+        height: 65px;
         background-color: #868B8E;
         position: fixed;
         justify-content: center;
         .header__wrap {
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
+            margin: 15px;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
             .logo {
                 display: flex;
                 flex-direction: row;
@@ -24,14 +23,14 @@
                     margin-left: 20px;
                     border-radius: 20px;
                 }
-                form.example input[type=text] {
+                form.search input[type=text] {
                     padding: 5px;
                     font-size: 10px;
                     border: 1px solid grey;
                     border-radius: 20px;
-                    float: left;
-                    position: relative;
+                    // float: left;
                     width: 80%;
+                    height: 30px;
                     background: #f1f1f1;
                   }
                   
@@ -40,20 +39,30 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .fa {
-                    width: 80px;
-                    height: 50px;
-                    padding: 7px;
-                    
-                    color: #E7D2CC;
-                    cursor: pointer;
-                    transition: .7s;
-                    &:hover {
-                        border-radius: 10px;
-                        background-color: burlywood;
-                        color: chocolate;
+                .middle__btn {
+                    width: calc(50%/5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 80%;
+
+                    i {
+                        width: 30px;
+                        height: 30px;
+                        padding: 5px;
+                        color: #E7D2CC;
+                        cursor: pointer;
+                        transition: .7s;
+                        &:hover {
+                            width: 50px;
+                            border-radius: 10px;
+                            background-color: #E7D2CC;
+                            color: #868B8E;
+                        }
                     }
+
                 }
+                
                 
             }
             .nav__right {
@@ -61,18 +70,15 @@
                 float: right;
                 .fa {
                     width: 30px;
-                    height: 50px;
+                    height: 30px;
                     padding: 7px;
                     color: #E7D2CC;
                     cursor: pointer;
                     transition: .7s;
-                    // &:first-of-type {
-                    //     width: 80px;
-                    // }
                     &:hover {
                         border-radius: 10px;
-                        background-color: burlywood;
-                        color: chocolate;
+                        background-color:#E7D2CC;
+                        color: #868B8E;
                     }
                 }
                 .username {
@@ -88,11 +94,16 @@
                         color: #E7D2CC;
                         padding: 5px;
                         font-family: $font-halant;
+                        &:hover {
+                            border-radius: 10px;
+                            background-color: #E7D2CC;
+                            color: #868B8E;
+                        }
                     }
                     &:hover {
                         border-radius: 10px;
-                        background-color: burlywood;
-                        color: chocolate;
+                        background-color: #E7D2CC;
+                        color: #868B8E;
                     }
                 }
 
@@ -175,6 +186,7 @@
                     display: grid;
                     grid-template-columns: 2fr 10fr 1fr;
                     width: 100%;
+                    grid-gap: 10px;
                     background-color: #E7D2CC;
                     box-shadow: 2px 4px 15px 0px grey;
                     border-radius: 5px;
@@ -204,6 +216,21 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        .fa {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            padding: 7px;
+                            cursor: pointer;
+                            &:hover {
+                                border-radius: 10px;
+                                background-color: #B9B7BD;
+                                color: #E7D2CC;
+                            }
+
+                        }
                     }   
                 }
                 .card__main {
@@ -220,18 +247,12 @@
 
                     }
                     .gallery {
-                        position: relative;
                         display: inline-block;
                         width: 100%;
                         margin-bottom: 5px;
-                        .count {
-                            position: absolute;
-
-                        }
                         .gallery__wrap {
                             width: 100%;
                             background-color: aqua;
-                            position
                             img {
                                 display: inline-block;
                                 width: 100%;
@@ -255,7 +276,6 @@
                                     grid-area: i5;
                                 }
                             }
-                        
                         }
 
                         
@@ -264,66 +284,53 @@
                             width: 100%;
                             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
                             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-                            grid-template-areas:
+                            grid-template-areas: 
+                            "i1 i1 i1 i1 i1 i1" 
+                            "i1 i1 i1 i1 i1 i1" 
                             "i1 i1 i1 i1 i1 i1"
-                            "i1 i1 i1 i1 i1 i1"
-                            "i1 i1 i1 i1 i1 i1"
-                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1" 
                             "i1 i1 i1 i1 i1 i1"
                             "i1 i1 i1 i1 i1 i1";
                         }
                         .length--2 {
                             display: grid;
                             width: 100%;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 1fr;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
                             grid-template-areas:
+                            "i1 i1 i1 i2 i2 i2" 
                             "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2" 
                             "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2" 
                             "i1 i1 i1 i2 i2 i2";
                         }
                         .length--3 {
                             display: grid;
                             width: 100%;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 1fr;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
                             grid-template-areas:
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i3 i3 i3"
-                            "i1 i1 i1 i3 i3 i3"
-                            "i1 i1 i1 i3 i3 i3";
+                            "i1 i1 i1 i1 i1 i1" 
+                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1"
+                            "i2 i2 i2 i3 i3 i3" 
+                            "i2 i2 i2 i3 i3 i3"
+                            "i2 i2 i2 i3 i3 i3";
                         }
                         .length--4 {
                             display: grid;
                             width: 100%;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 1fr;
-                            grid-template-areas:
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i3 i3 i3 i4 i4 i4"
-                            "i3 i3 i3 i4 i4 i4"
-                            "i3 i3 i3 i4 i4 i4";
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-areas: 
+                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1" 
+                            "i1 i1 i1 i1 i1 i1" 
+                            "i2 i2 i3 i3 i4 i4"
+                            "i2 i2 i3 i3 i4 i4"
+                            "i2 i2 i3 i3 i4 i4";
                         }
-                        .length--5 {
-                            display: grid;
-                            width: 100%;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 1fr;
-                            grid-template-areas:
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i3 i3 i4 i4 i5 i5"
-                            "i3 i3 i4 i4 i5 i5"
-                            "i3 i3 i4 i4 i5 i5";
-                        }            
                     }
                 }    
                 .like  {

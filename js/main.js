@@ -111,8 +111,7 @@ function returnMain(text) {
 
     let HTML = `<div class="card__main">
                     ${getText(text)}
-                    ${getGallery(text.paveiksliukai)}  
-                       
+                    ${getGallery(text.paveiksliukai)}   
                 </div>`;
     
     return HTML;
@@ -147,42 +146,96 @@ function returnFooter(who) {
 
 function getGallery(img) {
 
-    // console.log(img);
 
     let HTML = '';
     let pictures = '';
     let kiek = 4;
+
 
     if (img.length > 0) {
 
         for (let i = 0; i < img.length; i++) {
             pictures += `<img src="./img/${img[i]}" alt="pic">`;
             if (img.length > kiek) {
-
                 img.length = kiek;
             }
-                HTML = `<div class="gallery">
-                    <div class="gallery__wrap length--${i + 1}">
-                     ${pictures}   
-                    </div>
-                    <div class="count">+5</div>  
-                </div>`;
-            
+            HTML = `<div class="gallery">
+                        <div class="gallery__wrap length--${i + 1}">
+                        ${pictures}
+                        </div>
+                     </div>`;
         }
     }
-    
-    
+
+
     return HTML;
+
 }
+
+// function getGallery(img) {
+
+//     // console.log(img);
+
+//     let HTML = '';
+//     let pictures = '';
+//     let kiek = 4;
+
+//     if (img.length > 0) {
+
+//         for (let i = 0; i < img.length; i++) {
+//             pictures += `<img src="./img/${img[i]}" alt="pic">`;
+//             if (img.length > kiek) {
+
+//                 img.length = kiek;
+//             }
+//                 HTML = `<div class="gallery">
+//                     <div class="gallery__wrap length--${i + 1}">
+//                      ${pictures}   
+//                     </div>
+//                     <div class="count">+5</div>  
+//                 </div>`;
+            
+//         }
+//     }
+    
+    
+//     return HTML;
+// }
 
 
 function getTime(time) {
 
-    console.log(time);
+    //  console.log(time);
 
     let HTML = '';
 
-    HTML = `<div class="time">${time}</div>`;
+    var msPerMinute = 60 * 1000;
+    var msPerHour = msPerMinute * 60;
+    var msPerDay = msPerHour * 24;
+    var msPerMonth = msPerDay * 30;
+    var msPerYear = msPerDay * 365;
+    var previous = new Date(time);
+    var current = new Date().getTime();
+
+    var elapsed = current - previous;
+
+    if (elapsed < msPerMinute) {
+        return Math.round(elapsed / 1000).toString() + " seconds ago";
+    } else if (elapsed < msPerHour) {
+        return Math.round(elapsed / msPerMinute).toString() + " minutes ago";
+    } else if (elapsed < msPerDay) {
+        return Math.round(elapsed / msPerHour).toString() + " hours ago";
+    } else if (elapsed < msPerMonth) {
+        return Math.round(elapsed / msPerDay).toString() + " days ago";
+    } else if (elapsed < msPerYear) {
+        return Math.round(elapsed / msPerMonth).toString() + " months ago";
+    } else {
+        return Math.round(elapsed / msPerYear).toString() + " years ago";
+    }
+
+
+
+
 }
 
 
