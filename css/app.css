@@ -296,6 +296,7 @@ h6 {
   display: grid;
   grid-template-columns: 2fr 10fr 1fr;
   width: 100%;
+  grid-gap: 10px;
   background-color: #E7D2CC;
   box-shadow: 2px 4px 15px 0px grey;
   border-radius: 5px;
@@ -330,6 +331,22 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.wrapper .main .section .card .card__head .more .fa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.wrapper .main .section .card .card__head .more .fa:hover {
+  border-radius: 10px;
+  background-color: #B9B7BD;
+  color: #E7D2CC;
 }
 
 .wrapper .main .section .card .card__main {
@@ -404,39 +421,31 @@ img:nth-child(5) {
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1";
+  grid-template-areas: "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1";
 }
 
 .wrapper .main .section .card .card__main .gallery .length--2 {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2";
 }
 
 .wrapper .main .section .card .card__main .gallery .length--3 {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i3 i3 i3" "i1 i1 i1 i3 i3 i3" "i1 i1 i1 i3 i3 i3";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i2 i2 i2 i3 i3 i3" "i2 i2 i2 i3 i3 i3" "i2 i2 i2 i3 i3 i3";
 }
 
 .wrapper .main .section .card .card__main .gallery .length--4 {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i3 i3 i3 i4 i4 i4" "i3 i3 i3 i4 i4 i4" "i3 i3 i3 i4 i4 i4";
-}
-
-.wrapper .main .section .card .card__main .gallery .length--5 {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i1 i1 i1 i2 i2 i2" "i3 i3 i4 i4 i5 i5" "i3 i3 i4 i4 i5 i5" "i3 i3 i4 i4 i5 i5";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i1 i1 i1 i1 i1 i1" "i2 i2 i3 i3 i4 i4" "i2 i2 i3 i3 i4 i4" "i2 i2 i3 i3 i4 i4";
 }
 
 .wrapper .main .section .card .like {

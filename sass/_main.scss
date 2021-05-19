@@ -186,6 +186,7 @@
                     display: grid;
                     grid-template-columns: 2fr 10fr 1fr;
                     width: 100%;
+                    grid-gap: 10px;
                     background-color: #E7D2CC;
                     box-shadow: 2px 4px 15px 0px grey;
                     border-radius: 5px;
@@ -215,6 +216,21 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        .fa {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            padding: 7px;
+                            cursor: pointer;
+                            &:hover {
+                                border-radius: 10px;
+                                background-color: #B9B7BD;
+                                color: #E7D2CC;
+                            }
+
+                        }
                     }   
                 }
                 .card__main {
@@ -231,18 +247,12 @@
 
                     }
                     .gallery {
-                        position: relative;
                         display: inline-block;
                         width: 100%;
                         margin-bottom: 5px;
-                        .count {
-                            position: absolute;
-
-                        }
                         .gallery__wrap {
                             width: 100%;
                             background-color: aqua;
-                            position
                             img {
                                 display: inline-block;
                                 width: 100%;
@@ -266,7 +276,6 @@
                                     grid-area: i5;
                                 }
                             }
-                        
                         }
 
                         
@@ -275,66 +284,53 @@
                             width: 100%;
                             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
                             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-                            grid-template-areas:
+                            grid-template-areas: 
+                            "i1 i1 i1 i1 i1 i1" 
+                            "i1 i1 i1 i1 i1 i1" 
                             "i1 i1 i1 i1 i1 i1"
-                            "i1 i1 i1 i1 i1 i1"
-                            "i1 i1 i1 i1 i1 i1"
-                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1" 
                             "i1 i1 i1 i1 i1 i1"
                             "i1 i1 i1 i1 i1 i1";
                         }
                         .length--2 {
                             display: grid;
                             width: 100%;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 1fr;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
                             grid-template-areas:
+                            "i1 i1 i1 i2 i2 i2" 
                             "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2" 
                             "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
+                            "i1 i1 i1 i2 i2 i2" 
                             "i1 i1 i1 i2 i2 i2";
                         }
                         .length--3 {
                             display: grid;
                             width: 100%;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 1fr;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
                             grid-template-areas:
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i3 i3 i3"
-                            "i1 i1 i1 i3 i3 i3"
-                            "i1 i1 i1 i3 i3 i3";
+                            "i1 i1 i1 i1 i1 i1" 
+                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1"
+                            "i2 i2 i2 i3 i3 i3" 
+                            "i2 i2 i2 i3 i3 i3"
+                            "i2 i2 i2 i3 i3 i3";
                         }
                         .length--4 {
                             display: grid;
                             width: 100%;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 1fr;
-                            grid-template-areas:
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i3 i3 i3 i4 i4 i4"
-                            "i3 i3 i3 i4 i4 i4"
-                            "i3 i3 i3 i4 i4 i4";
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-areas: 
+                            "i1 i1 i1 i1 i1 i1"
+                            "i1 i1 i1 i1 i1 i1" 
+                            "i1 i1 i1 i1 i1 i1" 
+                            "i2 i2 i3 i3 i4 i4"
+                            "i2 i2 i3 i3 i4 i4"
+                            "i2 i2 i3 i3 i4 i4";
                         }
-                        .length--5 {
-                            display: grid;
-                            width: 100%;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 1fr;
-                            grid-template-areas:
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i1 i1 i1 i2 i2 i2"
-                            "i3 i3 i4 i4 i5 i5"
-                            "i3 i3 i4 i4 i5 i5"
-                            "i3 i3 i4 i4 i5 i5";
-                        }            
                     }
                 }    
                 .like  {
